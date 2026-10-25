@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Gitech ERP - O Ecossistema de Gestão para Comércio, Assistência e Varejo</title>
+    
+    <meta name="description" content="O ERP mais moderno do Brasil com Gitech Chat, WhatsApp Omnichannel, WMS Triangular, DRE em tempo real e Emissão Fiscal integrada. Conheça e teste grátis.">
+    <meta name="keywords" content="erp assistencia tecnica, erp informatica, sistema para ordem de servico, erp com whatsapp, wms e-commerce, emissor nfe nfce">
+    <meta name="author" content="Gitech Informática LTDA">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gitecherp.com.br/">
+    <meta property="og:title" content="Gitech ERP - Gestão Inteligente para Comércio e Assistência">
+    <meta property="og:description" content="Potencialize suas vendas, controle a bancada com inteligência e automatize cobranças no WhatsApp no piloto automático.">
+    <meta property="og:image" content="https://hub360.gitechinformatica.com/rmm/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://hub360.gitechinformatica.com/rmm/icone.ico" type="image/x-icon">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Gradiente animado sutil */
+        .hero-glow {
+            background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.15), rgba(16, 185, 129, 0.05) 50%, transparent 80%);
+        }
+        .card-glass {
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .card-glass:hover {
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-lg border-b border-slate-800/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- LOGO -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-emerald-500 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+                    G
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-xl font-black tracking-tight text-white flex items-center gap-1.5">
+                        GITECH <span class="text-indigo-400 font-extrabold text-sm px-2 py-0.5 rounded-md bg-indigo-500/10 border border-indigo-500/20">ERP</span>
+                    </span>
+                    <span class="text-[9px] uppercase tracking-widest font-bold text-slate-400">Software & Inteligência</span>
+                </div>
+            </a>
+
+            <!-- MENU DESKTOP -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-300">
+                <a href="#recursos" class="hover:text-indigo-400 transition-colors">Recursos</a>
+                <a href="#diferenciais" class="hover:text-indigo-400 transition-colors">Diferenciais</a>
+                <a href="#chat" class="hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+                    <span>Gitech Chat</span>
+                    <span class="text-[10px] bg-emerald-500/10 text-emerald-400 font-bold px-2 py-0.5 rounded-full border border-emerald-500/20">NOVO</span>
+                </a>
+                <a href="#precos" class="hover:text-indigo-400 transition-colors">Planos</a>
+                <a href="#faq" class="hover:text-indigo-400 transition-colors">Dúvidas</a>
+            </nav>
+
+            <!-- AÇÕES DE LOGIN E CTA -->
+            <div class="flex items-center gap-3">
+                <a href="https://hub360.gitechinformatica.com/erp" target="_blank" class="text-xs sm:text-sm font-bold text-slate-300 hover:text-white px-3 py-2 rounded-xl hover:bg-slate-800 transition-colors">
+                    Entrar no Sistema
+                </a>
+                <a href="#precos" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-xl shadow-lg shadow-indigo-600/25 transition-all transform hover:-translate-y-0.5">
+                    <span>Testar Grátis</span>
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-36 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-glow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            
+            <!-- BADGE DE NOVIDADE -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 border border-slate-700/80 mb-8 shadow-inner animate-pulse">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span class="text-xs font-bold text-slate-300">Nova Geração SaaS 2.0 • IA + WMS + WhatsApp Integrados</span>
+            </div>
+
+            <!-- TÍTULO PRINCIPAL -->
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.1] max-w-5xl mx-auto mb-8">
+                O Sistema de Gestão que <br class="hidden sm:block">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-300 to-emerald-400">
+                    automatiza o seu negócio
+                </span> da bancada ao caixa.
+            </h1>
+
+            <!-- SUBTÍTULO -->
+            <p class="text-base sm:text-xl text-slate-400 max-w-3xl mx-auto font-medium leading-relaxed mb-10">
+                Criado sob medida para assistências técnicas, distribuidoras e lojas que cansaram de sistemas engessados. Ordens de serviço com fotos, WhatsApp que cobra sozinho, DRE em tempo real e estoque sem furos.
+            </p>
+
+            <!-- BOTÕES CTA -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto mb-16">
+                <a href="#precos" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-black text-base px-8 py-4 rounded-2xl shadow-xl shadow-indigo-600/30 transition-all transform hover:-translate-y-0.5">
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                    <span>Começar Teste de 7 Dias</span>
+                </a>
+                <a href="https://wa.me/5516999999999?text=Olá,%20gostaria%20de%20ver%20uma%20demonstração%20do%20Gitech%20ERP" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900/90 hover:bg-slate-800 text-slate-200 font-bold text-base px-6 py-4 rounded-2xl border border-slate-700/80 transition-all">
+                    <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
+                    <span>Falar no WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- MOCKUP / PREVIEW VISUAL DO DASHBOARD -->
+            <div class="relative mx-auto max-w-5xl rounded-3xl p-2 bg-gradient-to-b from-slate-700/40 to-slate-900/80 shadow-2xl border border-slate-700/50">
+                <div class="rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-inner">
+                    <!-- Barra de janela simulada -->
+                    <div class="h-10 bg-slate-900 border-b border-slate-800 flex items-center px-4 gap-2">
+                        <div class="w-3 h-3 rounded-full bg-rose-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                        <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                        <div class="mx-auto text-[11px] font-mono text-slate-400 flex items-center gap-1.5">
+                            <i data-lucide="lock" class="w-3 h-3 text-emerald-400"></i>
+                            <span>app.gitecherp.com.br</span>
+                        </div>
+                    </div>
+                    <!-- Área visual simulando o painel do sistema -->
+                    <div class="p-6 sm:p-10 text-left bg-gradient-to-b from-slate-950 to-slate-900">
+                        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                            <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+                                <span class="text-[10px] font-black text-slate-400 uppercase">Faturamento do Mês</span>
+                                <div class="text-2xl font-black text-emerald-400 mt-1">R$ 130.871,54</div>
+                                <span class="text-[10px] text-emerald-500 font-bold flex items-center gap-1 mt-1">▲ +24% vs mês anterior</span>
+                            </div>
+                            <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+                                <span class="text-[10px] font-black text-slate-400 uppercase">OSs Concluídas</span>
+                                <div class="text-2xl font-black text-white mt-1">447 OSs</div>
+                                <span class="text-[10px] text-indigo-400 font-bold mt-1 block">Média de 3.2 dias de SLA</span>
+                            </div>
+                            <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+                                <span class="text-[10px] font-black text-slate-400 uppercase">Caixa Líquido (DRE)</span>
+                                <div class="text-2xl font-black text-indigo-400 mt-1">R$ 41.074,56</div>
+                                <span class="text-[10px] text-slate-400 font-bold mt-1 block">Margem Líquida Real</span>
+                            </div>
+                            <div class="bg-slate-900/90 border border-slate-800 p-4 rounded-xl">
+                                <span class="text-[10px] font-black text-slate-400 uppercase">Disparos WhatsApp</span>
+                                <div class="text-2xl font-black text-teal-400 mt-1">1.193 Pix</div>
+                                <span class="text-[10px] text-emerald-400 font-bold mt-1 block">100% Baixa Automática</span>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-slate-900/60 border border-slate-800 rounded-xl flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
+                                <span class="text-xs font-bold text-slate-300">Robô Omnichannel ativo • Monitorando Webhooks Sicredi, Inter e InfinitePay 24/7</span>
+                            </div>
+                            <span class="text-[11px] font-mono text-indigo-400">Latência: 12ms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROVA SOCIAL / NÚMEROS -->
+    <section class="py-16 border-y border-slate-800/80 bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-3xl sm:text-4xl font-black text-white mb-1">+400 mil</div>
+                    <div class="text-xs sm:text-sm font-bold text-slate-400 uppercase tracking-wider">Produtos Sincronizados</div>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl font-black text-emerald-400 mb-1">R$ 15M+</div>
+                    <div class="text-xs sm:text-sm font-bold text-slate-400 uppercase tracking-wider">Transacionados em Pix/Boleto</div>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl font-black text-indigo-400 mb-1">99.98%</div>
+                    <div class="text-xs sm:text-sm font-bold text-slate-400 uppercase tracking-wider">Disponibilidade em Nuvem</div>
+                </div>
+                <div>
+                    <div class="text-3xl sm:text-4xl font-black text-purple-400 mb-1">0 Segundos</div>
+                    <div class="text-xs sm:text-sm font-bold text-slate-400 uppercase tracking-wider">Tempo de Espera no Pix</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OS GRANDES PILARES / RECURSOS -->
+    <section id="recursos" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <h2 class="text-xs font-black text-indigo-400 uppercase tracking-widest mb-3">Tecnologia Feita Para o Mundo Real</h2>
+            <p class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+                Tudo o que uma empresa moderna precisa em um único lugar.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- CARD 1: ASSISTÊNCIA E OS -->
+            <div class="card-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 flex items-center justify-center mb-6 text-2xl">
+                    <i data-lucide="wrench" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-black text-white mb-3">Ordem de Serviço 360º</h3>
+                <p class="text-sm text-slate-400 font-medium leading-relaxed mb-4">
+                    Controle de bancada com checklist fotográfico de entrada e saída. Termo de garantia automático com assinatura digital e histórico do aparelho por número de série.
+                </p>
+                <ul class="text-xs text-slate-300 space-y-2 font-semibold">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Portal do Cliente sem senha</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Fotos de avarias antes da bancada</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> SLA e Painel Kanban para TV</li>
+                </ul>
+            </div>
+
+            <!-- CARD 2: GITECH CHAT & WHATSAPP -->
+            <div id="chat" class="card-glass p-8 rounded-3xl transition-all duration-300 border-indigo-500/30 shadow-xl shadow-indigo-500/5">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-6 text-2xl">
+                    <i data-lucide="message-square" class="w-7 h-7"></i>
+                </div>
+                <div class="flex items-center gap-2 mb-3">
+                    <h3 class="text-xl font-black text-white">Gitech Chat & WhatsApp</h3>
+                    <span class="text-[9px] bg-emerald-500 text-slate-950 font-black px-2 py-0.5 rounded-full uppercase">Piloto Automático</span>
+                </div>
+                <p class="text-sm text-slate-400 font-medium leading-relaxed mb-4">
+                    Envio automático de orçamentos, link Pix de entrada e notificação de serviço pronto no WhatsApp oficial do cliente. Quando ele paga, a OS baixa sozinha!
+                </p>
+                <ul class="text-xs text-slate-300 space-y-2 font-semibold">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Pix Copia e Cola instantâneo</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> PDFs e comprovantes térmicos no zap</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Régua de cobrança anti-inadimplência</li>
+                </ul>
+            </div>
+
+            <!-- CARD 3: WMS & ESTOQUE TRIANGULAR -->
+            <div class="card-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-purple-500/10 border border-purple-500/20 text-purple-400 flex items-center justify-center mb-6 text-2xl">
+                    <i data-lucide="boxes" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-black text-white mb-3">WMS & Estoque Inteligente</h3>
+                <p class="text-sm text-slate-400 font-medium leading-relaxed mb-4">
+                    O único ERP com algoritmo anti-duplicação para notas de Remessa Triangular (CFOP 5923/6923), cálculo de Curva A de reposição e alerta de Capital Congelado.
+                </p>
+                <ul class="text-xs text-slate-300 space-y-2 font-semibold">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Importação de XML sem duplicar estoque</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Radar de Ruptura (Gatilho Curva A)</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Alerta de mercadoria encalhada</li>
+                </ul>
+            </div>
+
+            <!-- CARD 4: DRE & FLUXO DE CAIXA -->
+            <div class="card-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-6 text-2xl">
+                    <i data-lucide="pie-chart" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-black text-white mb-3">DRE & Conciliação em Tempo Real</h3>
+                <p class="text-sm text-slate-400 font-medium leading-relaxed mb-4">
+                    Descubra exatamente qual é o seu lucro limpo. Nada de relatórios confusos no fim do mês: saiba sua margem EBITDA, CMV e conciliação bancária dia a dia.
+                </p>
+                <ul class="text-xs text-slate-300 space-y-2 font-semibold">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Mapa Semanal de horários de pico</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Separação de lucro de peças vs mão de obra</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Integração Sicredi, Inter e InfinitePay</li>
+                </ul>
+            </div>
+
+            <!-- CARD 5: FISCAL E CERTIFICADO A1 -->
+            <div class="card-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-teal-500/10 border border-teal-500/20 text-teal-400 flex items-center justify-center mb-6 text-2xl">
+                    <i data-lucide="receipt" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-black text-white mb-3">Emissor Fiscal Descomplicado</h3>
+                <p class="text-sm text-slate-400 font-medium leading-relaxed mb-4">
+                    Emita NF-e de produtos, NFC-e de balcão e NFS-e de serviços com apenas 1 clique. Conexão mTLS segura direto com os servidores da SEFAZ de todo o Brasil.
+                </p>
+                <ul class="text-xs text-slate-300 space-y-2 font-semibold">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Certificado Digital A1 em nuvem segura</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Envio automático de XML/DANFE por e-mail</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Modo Contingência Offline para PDV</li>
+                </ul>
+            </div>
+
+            <!-- CARD 6: INTELIGÊNCIA ARTIFICIAL -->
+            <div class="card-glass p-8 rounded-3xl transition-all duration-300">
+                <div class="w-14 h-14 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center mb-6 text-2xl">
+                    <i data-lucide="cpu" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-xl font-black text-white mb-3">Copiloto com IA Integrada</h3>
+                <p class="text-sm text-slate-400 font-medium leading-relaxed mb-4">
+                    Diagnóstico assistido por Inteligência Artificial para bancada, sugestão de peças compatíveis e resumos executivos automáticos do ritmo financeiro da sua loja.
+                </p>
+                <ul class="text-xs text-slate-300 space-y-2 font-semibold">
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Auditoria de falhas e compatibilidade</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> IA treinada para hardware e TI</li>
+                    <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Governança de tokens por empresa</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO COMPARATIVA: SISTEMAS ANTIGOS VS GITECH ERP -->
+    <section id="diferenciais" class="py-24 bg-slate-900/50 border-y border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-black text-indigo-400 uppercase tracking-widest mb-3">Comparativo Real</h2>
+                <p class="text-3xl sm:text-4xl font-black text-white tracking-tight">
+                    Por que os lojistas estão migrando para o Gitech ERP?
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Sistemas Tradicionais -->
+                <div class="bg-slate-950/80 p-8 rounded-3xl border border-rose-900/30">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center font-black">✕</div>
+                        <h4 class="text-lg font-black text-slate-300">Sistemas Legados & Tradicionais</h4>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <span class="text-rose-500 font-bold">✕</span>
+                            <span>Instalação manual no Windows que vive dando erro de servidor local.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-rose-500 font-bold">✕</span>
+                            <span>Cobrança por usuário adicional e limite de emissão de notas.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-rose-500 font-bold">✕</span>
+                            <span>WhatsApp desconectado: o atendente tem que copiar chave Pix e colar na mão.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-rose-500 font-bold">✕</span>
+                            <span>Duplicidade de estoque ao dar entrada em notas de Remessa Triangular.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-rose-500 font-bold">✕</span>
+                            <span>Suporte demorado que só atende por chamado e não entende de assistência.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Gitech ERP -->
+                <div class="bg-gradient-to-b from-indigo-950/40 to-slate-950 p-8 rounded-3xl border border-indigo-500/40 shadow-xl shadow-indigo-500/5">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-black">✓</div>
+                        <h4 class="text-lg font-black text-white">Gitech ERP (Nuvem 2.0)</h4>
+                    </div>
+                    <ul class="space-y-4 text-sm text-slate-300 font-medium">
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 font-bold">✓</span>
+                            <span>100% em Nuvem: acesse do PC, tablet ou celular de onde estiver.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 font-bold">✓</span>
+                            <span>Gitech Chat & WhatsApp Omnichannel conectado em tempo real com baixa Pix.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 font-bold">✓</span>
+                            <span>WMS Inteligente com proteção nativa para notas fiscais de remessa.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 font-bold">✓</span>
+                            <span>DRE e Conciliação que mostram o lucro limpo na conta bancária.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-emerald-400 font-bold">✓</span>
+                            <span>Atualizações automáticas semanais sem custo adicional de suporte.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PLANOS & PREÇOS (ESTRUTURA MODULAR) -->
+    <section id="precos" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-black text-indigo-400 uppercase tracking-widest mb-3 block">Transparência Total</span>
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
+                Planos simples que cabem no seu bolso.
+            </h2>
+            <p class="text-slate-400 font-medium text-base">
+                Sem taxa oculta de implantação. Cancele quando quiser.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+            
+            <!-- PLANO 1: START / BÁSICO -->
+            <div class="card-glass p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Ideal para Autônomos e Pequenas Lojas</span>
+                    <h3 class="text-2xl font-black text-white mb-4">Plano Start</h3>
+                    <div class="flex items-baseline gap-2 mb-6">
+                        <span class="text-4xl font-black text-white">R$ --</span>
+                        <span class="text-slate-400 text-xs font-bold">/mês</span>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-3 font-medium mb-8">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Gestão de OSs Ilimitada</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> PDV de Balcão e Vendas Rápidas</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Controle de Estoque Básico</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Emissão de Recibos Térmicos</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Até 2 Usuários simultâneos</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5516999999999?text=Quero%20conhecer%20o%20Plano%20Start%20do%20Gitech%20ERP" class="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider text-center border border-slate-700/80 transition-colors">
+                    Começar no Start
+                </a>
+            </div>
+
+            <!-- PLANO 2: PRO (O MAIS POPULAR) -->
+            <div class="card-glass p-8 rounded-3xl flex flex-col justify-between border-indigo-500/50 shadow-2xl shadow-indigo-500/10 relative">
+                <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-indigo-500 to-emerald-400 text-slate-950 font-black text-[10px] uppercase rounded-full shadow-md tracking-wider">
+                    ★ Mais Escolhido
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider block mb-2">Para Assistências e Lojas em Crescimento</span>
+                    <h3 class="text-2xl font-black text-white mb-4">Plano Pro & Omnichannel</h3>
+                    <div class="flex items-baseline gap-2 mb-6">
+                        <span class="text-4xl font-black text-white">R$ --</span>
+                        <span class="text-slate-400 text-xs font-bold">/mês</span>
+                    </div>
+                    <ul class="text-xs text-slate-200 space-y-3 font-semibold mb-8">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Tudo do Plano Start</b></li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Gitech Chat & WhatsApp Automático</b></li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> WMS com Proteção de Remessa Triangular</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Emissor Fiscal (NF-e, NFC-e e NFS-e)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> DRE e Conciliação em Tempo Real</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Até 5 Usuários simultâneos</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5516999999999?text=Quero%20testar%20o%20Plano%20Pro%20do%20Gitech%20ERP" class="w-full py-4 px-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs uppercase tracking-wider text-center shadow-lg shadow-indigo-600/30 transition-all">
+                    Testar 7 Dias Grátis
+                </a>
+            </div>
+
+            <!-- PLANO 3: ENTERPRISE -->
+            <div class="card-glass p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Para Redes, Franquias e Distribuidores</span>
+                    <h3 class="text-2xl font-black text-white mb-4">Plano Enterprise</h3>
+                    <div class="flex items-baseline gap-2 mb-6">
+                        <span class="text-4xl font-black text-white">R$ --</span>
+                        <span class="text-slate-400 text-xs font-bold">/mês</span>
+                    </div>
+                    <ul class="text-xs text-slate-300 space-y-3 font-medium mb-8">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Tudo do Plano Pro</b></li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Usuários Ilimitados</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Multi-Empresa e Filiais Conectadas</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Copiloto de Inteligência Artificial</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> E-commerce Integrado (Loja Virtual Própria)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Suporte Prioritário VIP</li>
+                    </ul>
+                </div>
+                <a href="https://wa.me/5516999999999?text=Quero%20um%20plano%20Enterprise%20personalizado%20para%20minha%20empresa" class="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider text-center border border-slate-700/80 transition-colors">
+                    Falar com Consultor
+                </a>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-12">
+            <p class="text-xs text-slate-400 font-medium">
+                💡 Precisa de um plano sob medida para sua rede de lojas? <a href="https://wa.me/5516999999999" class="text-indigo-400 font-bold hover:underline">Chame nossa equipe de especialistas</a>.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- FAQ / DÚVIDAS FREQUENTES -->
+    <section id="faq" class="py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800">
+        
+        <div class="text-center mb-16">
+            <h2 class="text-xs font-black text-indigo-400 uppercase tracking-widest mb-3">Tire Suas Dúvidas</h2>
+            <p class="text-3xl font-black text-white tracking-tight">Perguntas Frequentes</p>
+        </div>
+
+        <div class="space-y-4">
+            
+            <details class="group bg-slate-900/60 border border-slate-800 rounded-2xl p-5 cursor-pointer transition-all">
+                <summary class="flex justify-between items-center text-base font-bold text-white list-none">
+                    <span>Preciso instalar alguma coisa no meu computador?</span>
+                    <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-3 text-sm text-slate-400 leading-relaxed font-medium">
+                    Não! O Gitech ERP é 100% em nuvem (SaaS). Você pode acessar direto do navegador no seu computador, tablet ou celular, com total segurança e sem precisar de técnicos configurando rede local.
+                </p>
+            </details>
+
+            <details class="group bg-slate-900/60 border border-slate-800 rounded-2xl p-5 cursor-pointer transition-all">
+                <summary class="flex justify-between items-center text-base font-bold text-white list-none">
+                    <span>Como funciona a integração com o WhatsApp?</span>
+                    <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-3 text-sm text-slate-400 leading-relaxed font-medium">
+                    O Gitech ERP se conecta à API oficial e a robôs de mensageria. Quando você cria uma OS, envia o orçamento ou a máquina fica pronta, o sistema manda uma mensagem elegante para o cliente com o PDF em anexo e o botão de Pix Copia e Cola. Ao pagar, o sistema dá baixa sozinho!
+                </p>
+            </details>
+
+            <details class="group bg-slate-900/60 border border-slate-800 rounded-2xl p-5 cursor-pointer transition-all">
+                <summary class="flex justify-between items-center text-base font-bold text-white list-none">
+                    <span>Posso emitir notas fiscais com meu Certificado A1?</span>
+                    <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-3 text-sm text-slate-400 leading-relaxed font-medium">
+                    Sim! O sistema suporta emissão de NF-e (produtos), NFC-e (balcão/cupom fiscal) e NFS-e (prestação de serviços). Basta fazer o upload do seu arquivo de certificado `.pfx`, digitar a senha e começar a emitir em segundos.
+                </p>
+            </details>
+
+            <details class="group bg-slate-900/60 border border-slate-800 rounded-2xl p-5 cursor-pointer transition-all">
+                <summary class="flex justify-between items-center text-base font-bold text-white list-none">
+                    <span>Existe contrato de fidelidade ou multa de cancelamento?</span>
+                    <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
+                </summary>
+                <p class="mt-3 text-sm text-slate-400 leading-relaxed font-medium">
+                    Zero fidelidade! A mensalidade funciona como uma assinatura pré-paga. Se por qualquer motivo você decidir cancelar, basta solicitar e não haverá nenhuma cobrança adicional ou multa.
+                </p>
+            </details>
+
+        </div>
+
+    </section>
+
+    <!-- BANNER FINAL CTA -->
+    <section class="py-20 bg-gradient-to-b from-indigo-950/40 to-slate-950 border-t border-slate-800 text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-6">
+                Pronto para transformar a gestão da sua empresa?
+            </h2>
+            <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 font-medium">
+                Junte-se a centenas de empresas que já economizam tempo, evitam erros fiscais e vendem mais todos os dias.
+            </p>
+            <a href="#precos" class="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500 to-teal-400 hover:from-emerald-400 hover:to-teal-300 text-slate-950 font-black text-base px-10 py-5 rounded-2xl shadow-xl shadow-emerald-500/20 transition-all transform hover:-translate-y-1">
+                <span>Criar Minha Conta Grátis Agora</span>
+                <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-12 text-slate-500 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-black text-base">G</div>
+                <span class="font-black text-slate-300 text-sm">GITECH ERP</span>
+            </div>
+
+            <p class="text-center md:text-left">
+                © 2026 Gitech Informática LTDA. Todos os direitos reservados. <br>
+                Plataforma SaaS desenvolvida para máxima segurança, estabilidade e conformidade fiscal.
+            </p>
+
+            <div class="flex items-center gap-6">
+                <a href="https://hub360.gitechinformatica.com/erp" class="hover:text-slate-300 transition-colors">Acessar ERP</a>
+                <a href="#precos" class="hover:text-slate-300 transition-colors">Planos</a>
+                <a href="https://wa.me/5516999999999" class="hover:text-emerald-400 transition-colors">Suporte</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Ativação dos Ícones Lucide -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
