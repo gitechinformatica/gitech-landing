@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "cleanUrls": true,
+  "cleanUrls": false,
   "trailingSlash": false,
   "routes": [
+    {
+      "src": "/(documento|portal|display|tv|index)(?:\\.html)?$",
+      "has": [
+        {
+          "type": "host",
+          "value": "app.gitecherp.com.br"
+        }
+      ],
+      "dest": "https://hub360.gitechinformatica.com/erp/$1.html"
+    },
     {
       "src": "/(.*)",
       "has": [
