@@ -2,26 +2,16 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/",
+      "src": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "app.gitecherp.com.br"
         }
       ],
-      "destination": "https://hub360.gitechinformatica.com/erp/index.html"
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "app.gitecherp.com.br"
-        }
-      ],
-      "destination": "https://hub360.gitechinformatica.com/erp/:path*"
+      "dest": "https://hub360.gitechinformatica.com/erp/$1"
     }
   ],
   "headers": [
