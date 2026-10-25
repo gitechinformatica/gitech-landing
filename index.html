@@ -639,32 +639,50 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE PLANOS & PREÇOS (ESTRUTURA MODULAR) -->
+    <!-- SEÇÃO DE PLANOS & PREÇOS (ESTRUTURA MODULAR & DINÂMICA COM PAINEL SUPREMO) -->
     <section id="precos" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-12">
             <span class="text-xs font-black text-indigo-400 uppercase tracking-widest mb-3 block">Transparência Total</span>
+            <div id="lp-promo-banner" class="hidden mb-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gradient-to-r from-rose-500/20 via-amber-500/20 to-indigo-500/20 border border-amber-400/50 text-amber-300 font-black text-xs sm:text-sm uppercase tracking-wider animate-pulse shadow-lg">
+                🔥 OFERTA ESPECIAL POR TEMPO LIMITADO
+            </div>
             <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
                 Planos simples que cabem no seu bolso.
             </h2>
-            <p class="text-slate-400 font-medium text-base">
-                🎁 <b>1 Mês 100% Grátis para testar em TODOS os planos!</b> Sem taxa de implantação, sem fidelidade e com liberação imediata.
+            <p class="text-slate-400 font-medium text-base mb-8">
+                🎁 <b id="lp-texto-dias-trial">30 Dias 100% Grátis para testar em TODOS os planos!</b> Sem taxa de implantação, sem fidelidade e com liberação imediata.
             </p>
+
+            <!-- SELETOR INTERATIVO DE CICLO: MENSAL VS ANUAL -->
+            <div class="inline-flex items-center p-1.5 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-inner">
+                <button type="button" id="lp-btn-ciclo-mensal" onclick="window.selecionarCicloLanding('MENSAL')" class="px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-slate-400 hover:text-white transition-all cursor-pointer">
+                    📅 Ciclo Mensal
+                </button>
+                <button type="button" id="lp-btn-ciclo-anual" onclick="window.selecionarCicloLanding('ANUAL')" class="px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm bg-gradient-to-r from-indigo-600 to-emerald-500 text-white shadow-lg transition-all cursor-pointer flex items-center gap-2">
+                    <span>💎 Ciclo Anual</span>
+                    <span class="px-2 py-0.5 rounded-full bg-slate-950/80 text-emerald-300 text-[10px] font-black uppercase">Menor Preço + Migração Grátis</span>
+                </button>
+            </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             
             <!-- PLANO 1: START (ENTRADA IMBATÍVEL) -->
-            <div class="card-glass p-8 rounded-3xl flex flex-col justify-between">
+            <div class="card-glass p-8 rounded-3xl flex flex-col justify-between relative">
+                <div id="lp-badge-start" class="hidden absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-rose-500 to-amber-500 text-white font-black text-xs uppercase rounded-full shadow-md tracking-wider whitespace-nowrap"></div>
                 <div>
                     <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-2">Entrada Ideal para Autônomos e Assistências</span>
                     <h3 class="text-2xl font-black text-white mb-2">Plano Start</h3>
                     <p class="text-xs text-slate-400 font-medium mb-4">Gestão completa da bancada com emissão de NFS-e.</p>
+                    <div id="lp-de-start" class="hidden text-xs font-black text-rose-400 line-through mb-0.5">De R$ 69/mês</div>
                     <div class="flex items-baseline gap-2 mb-1">
-                        <span class="text-4xl font-black text-white">R$ 49</span>
+                        <span id="lp-por-label-start" class="hidden text-xs font-black uppercase text-emerald-400">Por</span>
+                        <span id="lp-preco-start" class="text-4xl font-black text-white">R$ 49</span>
                         <span class="text-slate-400 text-xs font-bold">/mês</span>
+                        <span id="lp-off-start" class="hidden px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/40 text-rose-300 font-black text-[10px] uppercase"></span>
                     </div>
-                    <span class="text-sm font-semibold text-emerald-400 font-bold block mb-1">ou R$ 39/mês no plano anual (economize R$ 120/ano)</span>
+                    <span id="lp-sub-start" class="text-sm font-semibold text-emerald-400 font-bold block mb-1">ou R$ 39/mês no plano anual (economize R$ 120/ano)</span>
                     <span class="inline-flex items-center gap-1 text-xs text-teal-300 font-black bg-teal-500/10 border border-teal-500/20 px-2 py-0.5 rounded-md mb-6">🎁 No Anual: Migração de Dados Gratuita</span>
                     <ul class="text-sm text-slate-200 space-y-3 font-medium mb-8">
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Gestão de OSs Ilimitada com Fotos</li>
@@ -676,26 +694,29 @@
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Até 2 Usuários simultâneos</li>
                     </ul>
                 </div>
-                <a href="https://app.gitecherp.com.br/?cadastro=1&plano=start" class="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm uppercase tracking-wider text-center border border-slate-700/80 transition-colors flex items-center justify-center gap-2">
-                    <span>Testar 30 Dias Grátis no Start</span>
+                <a id="lp-cta-start" href="https://app.gitecherp.com.br/?cadastro=1&plano=start&ciclo=ANUAL" class="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm uppercase tracking-wider text-center border border-slate-700/80 transition-colors flex items-center justify-center gap-2">
+                    <span id="lp-cta-txt-start">Testar 30 Dias Grátis no Start</span>
                     <i data-lucide="arrow-right" class="w-4 h-4 text-emerald-400"></i>
                 </a>
             </div>
 
             <!-- PLANO 2: PRO OMNICHANNEL (O MAIS ESCOLHIDO) -->
             <div class="card-glass p-8 rounded-3xl flex flex-col justify-between border-indigo-500/50 shadow-2xl shadow-indigo-500/10 relative">
-                <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-indigo-500 to-emerald-400 text-slate-950 font-black text-xs uppercase rounded-full shadow-md tracking-wider">
+                <div id="lp-badge-pro" class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-indigo-500 to-emerald-400 text-slate-950 font-black text-xs uppercase rounded-full shadow-md tracking-wider whitespace-nowrap">
                     ★ Mais Escolhido
                 </div>
                 <div>
                     <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider block mb-2">Para Assistências, Lojas e Distribuidoras</span>
                     <h3 class="text-2xl font-black text-white mb-2">Plano Pro Omnichannel</h3>
                     <p class="text-xs text-slate-400 font-medium mb-4">Automação de WhatsApp + Emissor Fiscal A1 Completo.</p>
+                    <div id="lp-de-pro" class="hidden text-xs font-black text-rose-400 line-through mb-0.5">De R$ 247/mês</div>
                     <div class="flex items-baseline gap-2 mb-1">
-                        <span class="text-4xl font-black text-emerald-400">R$ 197</span>
+                        <span id="lp-por-label-pro" class="hidden text-xs font-black uppercase text-emerald-400">Por</span>
+                        <span id="lp-preco-pro" class="text-4xl font-black text-emerald-400">R$ 197</span>
                         <span class="text-slate-400 text-xs font-bold">/mês</span>
+                        <span id="lp-off-pro" class="hidden px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/40 text-rose-300 font-black text-[10px] uppercase"></span>
                     </div>
-                    <span class="text-sm font-semibold text-indigo-400 font-bold block mb-1">ou R$ 167/mês no plano anual (2 meses grátis)</span>
+                    <span id="lp-sub-pro" class="text-sm font-semibold text-indigo-400 font-bold block mb-1">ou R$ 167/mês no plano anual (2 meses grátis)</span>
                     <span class="inline-flex items-center gap-1 text-xs text-emerald-300 font-black bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-md mb-6">🎁 No Anual: Migração de Dados Gratuita</span>
                     <ul class="text-sm text-slate-100 space-y-3 font-semibold mb-8">
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Tudo do Plano Start</b></li>
@@ -708,23 +729,27 @@
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Até 5 Usuários simultâneos</li>
                     </ul>
                 </div>
-                <a href="https://app.gitecherp.com.br/?cadastro=1&plano=pro" class="w-full py-4 px-4 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-black text-sm uppercase tracking-wider text-center shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2">
-                    <span>Testar 30 Dias Grátis no Pro</span>
+                <a id="lp-cta-pro" href="https://app.gitecherp.com.br/?cadastro=1&plano=pro&ciclo=ANUAL" class="w-full py-4 px-4 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white font-black text-sm uppercase tracking-wider text-center shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2">
+                    <span id="lp-cta-txt-pro">Testar 30 Dias Grátis no Pro</span>
                     <i data-lucide="zap" class="w-4 h-4"></i>
                 </a>
             </div>
 
             <!-- PLANO 3: ENTERPRISE -->
-            <div class="card-glass p-8 rounded-3xl flex flex-col justify-between">
+            <div class="card-glass p-8 rounded-3xl flex flex-col justify-between relative">
+                <div id="lp-badge-enterprise" class="hidden absolute -top-3.5 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-black text-xs uppercase rounded-full shadow-md tracking-wider whitespace-nowrap"></div>
                 <div>
                     <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Para Redes, Franquias e Grandes Operações</span>
                     <h3 class="text-2xl font-black text-white mb-2">Plano Enterprise</h3>
                     <p class="text-xs text-slate-400 font-medium mb-4">Multi-empresa com loja virtual integrada.</p>
+                    <div id="lp-de-enterprise" class="hidden text-xs font-black text-rose-400 line-through mb-0.5">De R$ 497/mês</div>
                     <div class="flex items-baseline gap-2 mb-1">
-                        <span class="text-4xl font-black text-white">R$ 397</span>
+                        <span id="lp-por-label-enterprise" class="hidden text-xs font-black uppercase text-emerald-400">Por</span>
+                        <span id="lp-preco-enterprise" class="text-4xl font-black text-white">R$ 397</span>
                         <span class="text-slate-400 text-xs font-bold">/mês</span>
+                        <span id="lp-off-enterprise" class="hidden px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/40 text-rose-300 font-black text-[10px] uppercase"></span>
                     </div>
-                    <span class="text-sm font-semibold text-slate-400 font-bold block mb-1">ou R$ 349/mês no plano anual</span>
+                    <span id="lp-sub-enterprise" class="text-sm font-semibold text-slate-400 font-bold block mb-1">ou R$ 349/mês no plano anual</span>
                     <span class="inline-flex items-center gap-1 text-xs text-purple-300 font-black bg-purple-500/10 border border-purple-500/20 px-2 py-0.5 rounded-md mb-6">🎁 No Anual: Migração VIP + Treinamento</span>
                     <ul class="text-sm text-slate-200 space-y-3 font-medium mb-8">
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Tudo do Plano Pro</b></li>
@@ -736,8 +761,8 @@
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> Suporte Prioritário VIP via WhatsApp</li>
                     </ul>
                 </div>
-                <a href="https://app.gitecherp.com.br/?cadastro=1&plano=enterprise" class="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm uppercase tracking-wider text-center border border-slate-700/80 transition-colors flex items-center justify-center gap-2">
-                    <span>Testar 30 Dias Grátis no Enterprise</span>
+                <a id="lp-cta-enterprise" href="https://app.gitecherp.com.br/?cadastro=1&plano=enterprise&ciclo=ANUAL" class="w-full py-3.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm uppercase tracking-wider text-center border border-slate-700/80 transition-colors flex items-center justify-center gap-2">
+                    <span id="lp-cta-txt-enterprise">Testar 30 Dias Grátis no Enterprise</span>
                     <i data-lucide="arrow-right" class="w-4 h-4 text-purple-400"></i>
                 </a>
             </div>
@@ -746,7 +771,7 @@
 
         <div class="text-center mt-12">
             <p class="text-xs text-slate-400 font-medium">
-                💡 Precisa de um plano sob medida para sua rede de lojas? <a href="https://wa.me/551832228288" class="text-indigo-400 font-bold hover:underline">Chame nossa equipe de especialistas</a>.
+                💡 Após os <span id="lp-rodape-dias">30</span> dias grátis, você escolhe dentro do próprio ERP se prefere pagar no <b>Ciclo Mensal</b> ou <b>Anual (em até 12x no Cartão ou Pix)</b>. Precisa de um plano sob medida? <a href="https://wa.me/551832228288" class="text-indigo-400 font-bold hover:underline">Chame nossa equipe</a>.
             </p>
         </div>
 
@@ -912,9 +937,164 @@
         </div>
     </footer>
 
-    <!-- Ativação dos Ícones Lucide -->
+    <!-- Ativação dos Ícones Lucide & Sincronizador Dinâmico de Preços/Promoções com o Painel Supremo -->
     <script>
         lucide.createIcons();
+
+        window._lpTabelaPrecos = {
+            promo_ativa: false,
+            promo_banner: "🔥 OFERTA ESPECIAL POR TEMPO LIMITADO",
+            dias_trial: 30,
+            start: { mensal_de: 49, mensal_por: 0, anual_de: 39, anual_por: 0, badge_promo: "" },
+            pro: { mensal_de: 197, mensal_por: 0, anual_de: 167, anual_por: 0, badge_promo: "★ Mais Escolhido" },
+            enterprise: { mensal_de: 397, mensal_por: 0, anual_de: 349, anual_por: 0, badge_promo: "" }
+        };
+        window._lpCicloAtual = 'ANUAL';
+
+        window.renderizarPrecosLanding = function() {
+            const t = window._lpTabelaPrecos;
+            const isAnual = window._lpCicloAtual === 'ANUAL';
+            const dias = t.dias_trial || 30;
+
+            // Atualiza botões do Toggle Mensal / Anual
+            const btnM = document.getElementById('lp-btn-ciclo-mensal');
+            const btnA = document.getElementById('lp-btn-ciclo-anual');
+            if (btnM && btnA) {
+                if (isAnual) {
+                    btnA.className = 'px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm bg-gradient-to-r from-indigo-600 to-emerald-500 text-white shadow-lg transition-all cursor-pointer flex items-center gap-2';
+                    btnM.className = 'px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-slate-400 hover:text-white transition-all cursor-pointer';
+                } else {
+                    btnM.className = 'px-5 py-2.5 rounded-xl font-black text-xs sm:text-sm bg-gradient-to-r from-indigo-600 to-emerald-500 text-white shadow-lg transition-all cursor-pointer';
+                    btnA.className = 'px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-slate-400 hover:text-white transition-all cursor-pointer flex items-center gap-2';
+                }
+            }
+
+            // Banner de Promoção Global
+            const bannerEl = document.getElementById('lp-promo-banner');
+            if (bannerEl) {
+                if (t.promo_ativa && t.promo_banner) {
+                    bannerEl.textContent = t.promo_banner;
+                    bannerEl.classList.remove('hidden');
+                } else {
+                    bannerEl.classList.add('hidden');
+                }
+            }
+
+            const txtTrial = document.getElementById('lp-texto-dias-trial');
+            if (txtTrial) txtTrial.textContent = `${dias} Dias 100% Grátis para testar em TODOS os planos!`;
+            const rodDias = document.getElementById('lp-rodape-dias');
+            if (rodDias) rodDias.textContent = dias;
+
+            ['start', 'pro', 'enterprise'].forEach(k => {
+                const p = t[k] || {};
+                const mDe = Number(p.mensal_de) || 0;
+                const mPor = Number(p.mensal_por) || 0;
+                const aDe = Number(p.anual_de) || 0;
+                const aPor = Number(p.anual_por) || 0;
+
+                const mEfetivo = (mPor > 0 && mPor < mDe) ? mPor : mDe;
+                const aEfetivo = (aPor > 0 && aPor < aDe) ? aPor : aDe;
+
+                // Quando está na aba MENSAL mostra o valor mensal no topo; quando está na aba ANUAL mostra o valor mensal de referência ou o destaque De/Por
+                const rawDe = isAnual ? aDe : mDe;
+                const rawPor = isAnual ? aPor : mPor;
+                const temPromo = rawPor > 0 && rawPor < rawDe;
+                const valorExibido = temPromo ? rawPor : rawDe;
+                const descPct = temPromo ? Math.round(((rawDe - rawPor) / rawDe) * 100) : 0;
+
+                const elDe = document.getElementById(`lp-de-${k}`);
+                const elPorLbl = document.getElementById(`lp-por-label-${k}`);
+                const elPreco = document.getElementById(`lp-preco-${k}`);
+                const elOff = document.getElementById(`lp-off-${k}`);
+                const elSub = document.getElementById(`lp-sub-${k}`);
+                const elBadge = document.getElementById(`lp-badge-${k}`);
+                const elCta = document.getElementById(`lp-cta-${k}`);
+                const elCtaTxt = document.getElementById(`lp-cta-txt-${k}`);
+
+                if (elDe && elPorLbl && elOff) {
+                    if (temPromo) {
+                        elDe.textContent = `🔥 De R$ ${rawDe}/mês`;
+                        elDe.classList.remove('hidden');
+                        elPorLbl.classList.remove('hidden');
+                        elOff.textContent = `-${descPct}% OFF`;
+                        elOff.classList.remove('hidden');
+                    } else {
+                        elDe.classList.add('hidden');
+                        elPorLbl.classList.add('hidden');
+                        elOff.classList.add('hidden');
+                    }
+                }
+
+                if (elPreco) elPreco.textContent = `R$ ${valorExibido}`;
+
+                if (elSub) {
+                    const econAno = Math.max(0, Math.round((mEfetivo - aEfetivo) * 12));
+                    if (isAnual) {
+                        elSub.textContent = `no plano anual em até 12x (ou R$ ${mEfetivo}/mês no mensal • economize R$ ${econAno}/ano)`;
+                    } else {
+                        elSub.textContent = `no plano mensal sem fidelidade (ou R$ ${aEfetivo}/mês no anual • economize R$ ${econAno}/ano)`;
+                    }
+                }
+
+                if (elBadge) {
+                    const textoBadge = p.badge_promo || (temPromo ? `🔥 OFERTA ${descPct}% OFF` : (k === 'pro' ? '★ Mais Escolhido' : ''));
+                    if (textoBadge) {
+                        elBadge.textContent = textoBadge;
+                        elBadge.classList.remove('hidden');
+                    } else if (k !== 'pro') {
+                        elBadge.classList.add('hidden');
+                    }
+                }
+
+                if (elCta) {
+                    elCta.href = `https://app.gitecherp.com.br/?cadastro=1&plano=${k}&ciclo=${window._lpCicloAtual}`;
+                }
+                if (elCtaTxt) {
+                    const nomeCurto = k === 'start' ? 'Start' : (k === 'pro' ? 'Pro' : 'Enterprise');
+                    elCtaTxt.textContent = `Testar ${dias} Dias Grátis no ${nomeCurto}`;
+                }
+            });
+        };
+
+        window.selecionarCicloLanding = function(ciclo) {
+            window._lpCicloAtual = ciclo;
+            window.renderizarPrecosLanding();
+        };
+
+        // Carrega em tempo real os preços configurados pelo SUPREMO_GLOBAL no Supabase
+        (async function carregarPrecosDinamicosSupremo() {
+            window.renderizarPrecosLanding();
+            try {
+                const SUPA_URL = 'https://ehhsdjxozeygeuobbmfw.supabase.co';
+                const SUPA_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVoaHNkanhvemV5Z2V1b2JibWZ3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA1MjA0NTksImV4cCI6MjA5NjA5NjQ1OX0.Q2dkv8ac8iBuoNtk1QO-B5WJU4E4L9g9zAEpc2ciJjA';
+                const resp = await fetch(`${SUPA_URL}/rest/v1/configuracoes_empresa?select=ecommerce_setup,apis_externas&limit=30`, {
+                    headers: { 'apikey': SUPA_KEY, 'Authorization': `Bearer ${SUPA_KEY}` }
+                });
+                if (!resp.ok) return;
+                const rows = await resp.json();
+                if (!Array.isArray(rows)) return;
+                const rowComPreco = rows.find(r =>
+                    (r.ecommerce_setup && r.ecommerce_setup.tabela_precos_saas) ||
+                    (r.apis_externas && r.apis_externas.tabela_precos_saas)
+                );
+                if (rowComPreco) {
+                    const salvo = (rowComPreco.ecommerce_setup && rowComPreco.ecommerce_setup.tabela_precos_saas) ||
+                                  (rowComPreco.apis_externas && rowComPreco.apis_externas.tabela_precos_saas);
+                    if (salvo && typeof salvo === 'object') {
+                        window._lpTabelaPrecos = {
+                            ...window._lpTabelaPrecos,
+                            ...salvo,
+                            start: { ...window._lpTabelaPrecos.start, ...(salvo.start || {}) },
+                            pro: { ...window._lpTabelaPrecos.pro, ...(salvo.pro || {}) },
+                            enterprise: { ...window._lpTabelaPrecos.enterprise, ...(salvo.enterprise || {}) }
+                        };
+                        window.renderizarPrecosLanding();
+                    }
+                }
+            } catch (e) {
+                console.warn('Preços padrão mantidos:', e);
+            }
+        })();
     </script>
 </body>
 </html>
