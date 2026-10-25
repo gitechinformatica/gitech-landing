@@ -787,14 +787,45 @@
                 </p>
             </details>
 
-            <details class="group bg-slate-900/60 border border-slate-800 rounded-2xl p-5 cursor-pointer transition-all">
+            <details class="group bg-slate-900/60 border border-indigo-500/30 rounded-2xl p-6 cursor-pointer transition-all">
                 <summary class="flex justify-between items-center text-lg font-bold text-white list-none">
-                    <span>Como funciona a integração com o WhatsApp?</span>
+                    <span class="flex items-center gap-2">
+                        <span class="text-emerald-400 font-black">✦</span>
+                        Como funciona a integração com o WhatsApp? (Conheça os 2 Modos)
+                    </span>
                     <span class="text-indigo-400 group-open:rotate-180 transition-transform">▼</span>
                 </summary>
-                <p class="mt-3 text-base text-slate-300 leading-relaxed font-medium">
-                    O Gitech ERP se conecta à API oficial e a robôs de mensageria. Com apenas 1 clique dentro da OS, o sistema dispara uma mensagem profissional no WhatsApp do cliente com o PDF do orçamento em anexo e o Pix Copia e Cola. Assim que o cliente realiza o pagamento pelo banco dele, o ERP identifica via Webhook e dá a baixa automática!
-                </p>
+                <div class="mt-4 text-base text-slate-300 leading-relaxed space-y-4 font-medium">
+                    <p>
+                        O Gitech ERP oferece <strong>duas modalidades flexíveis</strong> de conexão para você escolher a que melhor se adapta à realidade da sua empresa:
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        <!-- MODO 1: QR CODE NATIVO (GRATUITO) -->
+                        <div class="p-4 rounded-xl bg-slate-950/70 border border-slate-800">
+                            <div class="flex items-center gap-2 text-emerald-400 font-black text-sm uppercase mb-1.5">
+                                <span>📱</span> Modo 1: QR Code Direto (Incluso & Gratuito)
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Conecte seu próprio aparelho escaneando um QR Code direto no ERP (via Evolution API). Dispare orçamentos em PDF, avisos de serviço pronto e links Pix em 1 clique sem pagar nenhuma mensalidade extra de mensageria!
+                            </p>
+                        </div>
+
+                        <!-- MODO 2: GITECH CHAT & IA (AVULSO / API OFICIAL) -->
+                        <div class="p-4 rounded-xl bg-slate-950/70 border border-indigo-500/30">
+                            <div class="flex items-center gap-2 text-indigo-400 font-black text-sm uppercase mb-1.5">
+                                <span>☁️</span> Modo 2: Gitech Chat Omnichannel & IA (Avulso)
+                            </div>
+                            <p class="text-xs text-slate-400 leading-relaxed">
+                                Plataforma profissional de atendimento multicanal com <strong>robôs inteligentes com IA (AWS Bedrock)</strong> treinados no seu estoque, múltiplos atendentes simultâneos no mesmo número e conexão tanto por QR Code quanto pela <strong>API Oficial da Meta (Cloud API)</strong> com zero risco de bloqueio.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-slate-300 pt-1">
+                        ⚡ <strong>Baixa Automática no Pix:</strong> Em ambos os modos, assim que o cliente paga o Pix Copia e Cola gerado pelo ERP, o sistema reconhece a compensação bancária e baixa a OS e o Pedido sozinho, sem ninguém precisar conferir extrato bancário manual!
+                    </p>
+                </div>
             </details>
 
             <details class="group bg-slate-900/60 border border-slate-800 rounded-2xl p-5 cursor-pointer transition-all">
