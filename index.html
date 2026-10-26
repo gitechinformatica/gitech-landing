@@ -517,28 +517,28 @@
                 <p class="text-sm text-slate-400 mt-2 font-medium">O dinheiro do seu cliente cai direto na sua conta jurídica, sem intermediários segurando o seu saldo.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <!-- SICREDI -->
-                <div class="bg-slate-950/70 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl flex flex-col items-center text-center transition-all">
-                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-black text-2xl mb-4 border border-emerald-500/20">
-                        <i data-lucide="landmark" class="w-7 h-7"></i>
-                    </div>
-                    <h4 class="text-lg font-black text-white mb-1">Sicredi</h4>
-                    <span class="text-sm font-semibold font-bold text-emerald-400 uppercase tracking-wider mb-2">API Pix & Boletos Híbridos</span>
-                    <p class="text-sm text-slate-300 leading-relaxed font-medium">
-                        Emissão de boletos com QR Code Pix integrado e conciliação em tempo real. Configuração simples via Chave de API e Certificado no ERP.
-                    </p>
-                </div>
-
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                 <!-- BANCO INTER -->
                 <div class="bg-slate-950/70 border border-slate-800 hover:border-amber-500/40 p-6 rounded-2xl flex flex-col items-center text-center transition-all">
                     <div class="w-14 h-14 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-400 font-black text-2xl mb-4 border border-amber-500/20">
                         <i data-lucide="wallet" class="w-7 h-7"></i>
                     </div>
                     <h4 class="text-lg font-black text-white mb-1">Banco Inter</h4>
-                    <span class="text-sm font-semibold font-bold text-amber-400 uppercase tracking-wider mb-2">API Conta PJ Empresarial</span>
+                    <span class="text-xs font-bold text-amber-400 uppercase tracking-wider mb-2">API Pix &amp; BolePix V3</span>
                     <p class="text-sm text-slate-300 leading-relaxed font-medium">
-                        Gere Pix Cobrança e boletos gratuitos direto pelo Inter. Baixa imediata via Webhook assim que o cliente paga.
+                        Gere Pix Cobrança e Boletos Híbridos (BolePix) gratuitos direto na sua conta PJ do Inter, com baixa imediata via Webhook.
+                    </p>
+                </div>
+
+                <!-- SICREDI -->
+                <div class="bg-slate-950/70 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl flex flex-col items-center text-center transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 font-black text-2xl mb-4 border border-emerald-500/20">
+                        <i data-lucide="landmark" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-lg font-black text-white mb-1">Sicredi</h4>
+                    <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider mb-2">API Pix Cobrança</span>
+                    <p class="text-sm text-slate-300 leading-relaxed font-medium">
+                        Geração de QR Code Pix e Copia e Cola com conciliação em tempo real direto na conta da sua cooperativa Sicredi.
                     </p>
                 </div>
 
@@ -548,16 +548,28 @@
                         <i data-lucide="credit-card" class="w-7 h-7"></i>
                     </div>
                     <h4 class="text-lg font-black text-white mb-1">InfinitePay</h4>
-                    <span class="text-sm font-semibold font-bold text-indigo-400 uppercase tracking-wider mb-2">Maquininhas Smart & Links Pix</span>
+                    <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-2">Links de Cartão &amp; Pix</span>
                     <p class="text-sm text-slate-300 leading-relaxed font-medium">
-                        Menores taxas do mercado. Links de pagamento no WhatsApp e integração inteligente com as maquininhas para baixa instantânea.
+                        Envie links de pagamento parcelados no cartão ou Pix no WhatsApp e receba na sua conta InfinitePay com baixa instantânea.
+                    </p>
+                </div>
+
+                <!-- MERCADO PAGO -->
+                <div class="bg-slate-950/70 border border-slate-800 hover:border-sky-500/40 p-6 rounded-2xl flex flex-col items-center text-center transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-500/10 flex items-center justify-center text-sky-400 font-black text-2xl mb-4 border border-sky-500/20">
+                        <i data-lucide="qr-code" class="w-7 h-7"></i>
+                    </div>
+                    <h4 class="text-lg font-black text-white mb-1">Mercado Pago</h4>
+                    <span class="text-xs font-bold text-sky-400 uppercase tracking-wider mb-2">Pix &amp; Checkout Online</span>
+                    <p class="text-sm text-slate-300 leading-relaxed font-medium">
+                        Gere QR Code Pix dinâmico e links de pagamento (Cartão e Pix) direto na sua conta Mercado Pago dentro do ERP.
                     </p>
                 </div>
             </div>
 
-            <div class="mt-8 text-center max-w-2xl mx-auto">
+            <div class="mt-8 text-center max-w-3xl mx-auto">
                 <div class="p-5 rounded-2xl bg-slate-900/60 border border-slate-800 text-sm text-slate-300 font-medium">
-                    <strong class="text-white">Como funciona para o lojista?</strong> É 100% independente! O lojista gera as credenciais e chaves de API direto no portal do próprio banco (Sicredi Empresas, Inter PJ ou InfinitePay) e preenche nas <span class="text-indigo-400 font-mono">Configurações da Loja</span> do ERP. Sem intermediários, sem retenção de dinheiro.
+                    <strong class="text-white">Como funciona para o lojista?</strong> É 100% independente! Você contrata/utiliza a sua própria conta no banco ou gateway de sua preferência (<strong>Banco Inter PJ, Sicredi, InfinitePay ou Mercado Pago</strong>), cadastra suas credenciais em <span class="text-indigo-400 font-mono">Configurações da Loja</span> e escolhe apenas os botões que deseja exibir nas telas do sistema. Sem intermediários e o dinheiro cai direto na sua conta!
                 </div>
             </div>
         </div>
@@ -618,7 +630,7 @@
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="text-emerald-400 font-bold">✓</span>
-                            <span>Disparo no WhatsApp em 1 clique e baixa automática (Pix, Boleto e Cartão via Inter, Sicredi e InfinitePay).</span>
+                            <span>Disparo no WhatsApp em 1 clique e baixa automática (Pix e Boleto no Inter, Pix no Sicredi, Cartão/Pix na InfinitePay e Mercado Pago).</span>
                         </li>
                         <li class="flex items-start gap-3">
                             <span class="text-emerald-400 font-bold">✓</span>
@@ -721,7 +733,7 @@
                     <ul class="text-sm text-slate-100 space-y-3 font-semibold mb-8">
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Tudo do Plano Start</b></li>
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Disparo de WhatsApp em 1 Clique (Conexão QR Code Inclusa)</b></li>
-                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Baixa Automática Pix, BolePix e Cartão (Inter, Sicredi e InfinitePay)</b></li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Baixa Automática (Pix/Boleto no Inter, Pix no Sicredi, Cartão/Pix na InfinitePay e Mercado Pago)</b></li>
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> <b>Fiscal Completo (NF-e de Produtos + NFC-e Balcão + NFS-e)</b></li>
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> WMS com Proteção de Remessa Triangular (CFOP 5923)</li>
                         <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400 shrink-0"></i> DRE Gerencial, Margem EBITDA e Conciliação Bancária</li>
@@ -885,12 +897,13 @@
                             A conciliação em tempo real funciona tanto para <strong>Pix Dinâmico</strong> quanto para <strong>Links e Cartões</strong>! O ERP liquida ordens de serviço e pedidos de forma autônoma integrado a:
                         </p>
                         <ul class="text-sm text-slate-200 space-y-1.5 font-medium list-disc list-inside">
-                            <li><strong>Banco Inter:</strong> Baixa instantânea no Pix Cobrança e compensação de BolePix V3.</li>
-                            <li><strong>Sicredi:</strong> Conciliação em milissegundos via Webhook oficial Pix e boletos híbridos.</li>
-                            <li><strong>InfinitePay:</strong> Baixa automática em vendas no cartão (à vista ou parcelado) e links de pagamento enviados no WhatsApp.</li>
+                            <li><strong>Banco Inter:</strong> Baixa instantânea no Pix Cobrança e emissão/compensação de BolePix V3.</li>
+                            <li><strong>Sicredi:</strong> Conciliação em milissegundos via Webhook oficial de Pix Cobrança (QR Code e Copia e Cola).</li>
+                            <li><strong>InfinitePay:</strong> Baixa automática em links de pagamento (Cartão à vista/parcelado e Pix) enviados no WhatsApp.</li>
+                            <li><strong>Mercado Pago:</strong> Emissão de QR Code Pix e links de pagamento Checkout Pro direto na sua conta.</li>
                         </ul>
                         <p class="text-xs text-slate-300 font-medium">
-                            <em>*Para ativar a baixa autônoma, basta o lojista configurar suas chaves de API/Webhook do seu próprio banco em <strong>Configurações da Loja</strong>. O dinheiro vai 100% direto para a sua conta!</em>
+                            <em>*Importante: O lojista contrata/utiliza a sua própria conta bancária ou gateway e escolhe em <strong>Configurações da Loja</strong> apenas os botões que deseja exibir nas telas do ERP. O dinheiro vai 100% direto para a sua conta!</em>
                         </p>
                     </div>
                 </div>
