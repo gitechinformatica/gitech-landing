@@ -1173,7 +1173,7 @@
             // Banner de Promoção Global
             const bannerEl = document.getElementById('lp-promo-banner');
             if (bannerEl) {
-                if (t.promo_ativa && t.promo_banner) {
+                if (t.promo_banner && t.promo_banner.trim() !== '') {
                     bannerEl.textContent = t.promo_banner;
                     bannerEl.classList.remove('hidden');
                 } else {
@@ -1238,11 +1238,19 @@
                 }
 
                 if (elBadge) {
-                    const textoBadge = p.badge_promo || (temPromo ? `🔥 OFERTA ${descPct}% OFF` : (k === 'pro' ? '★ Mais Escolhido' : ''));
-                    if (textoBadge) {
+                    let textoBadge = '';
+                    if (p.badge_promo !== undefined && p.badge_promo !== null) {
+                        textoBadge = p.badge_promo;
+                    } else if (temPromo) {
+                        textoBadge = `🔥 OFERTA ${descPct}% OFF`;
+                    } else if (k === 'pro') {
+                        textoBadge = '★ Mais Escolhido';
+                    }
+
+                    if (textoBadge && textoBadge.trim() !== '') {
                         elBadge.textContent = textoBadge;
                         elBadge.classList.remove('hidden');
-                    } else if (k !== 'pro') {
+                    } else {
                         elBadge.classList.add('hidden');
                     }
                 }
